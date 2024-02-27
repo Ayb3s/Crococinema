@@ -1,0 +1,538 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+
+.bg {
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    text-align: center;
+    padding-top: 40%;
+}
+
+.logo{
+    width: 100%;
+    z-index: 2;
+}
+.logobutton{
+    display: block;
+    float: right;
+    width: 10vw;
+    min-width: 100px;
+    margin-top: 1%;
+    margin-right: 0px;
+    transition:0.3s;
+    background:none;
+    border:none;
+    z-index: 2;
+}
+.open{
+    font-size:200%;
+    margin-left: 10px;
+    padding-top:10px;
+    list-style-type: none;
+    background:none;
+    border:none;
+    z-index: 1;
+}
+.close{
+    font-size:210%;
+    margin-left: 20px;
+    list-style-type: none;
+    background:none;
+    border:none;
+    z-index: 3;
+    opacity: 1;
+    margin-top: 20px;
+    position: absolute;
+    transition: 0.3s;
+}
+.fa-bars{
+    transition:0.3s;
+}
+.fa-bars:hover{
+    color: rgb(255, 0, 0) !important;
+    transition:0.3s;
+    cursor: pointer;
+}
+.fa-xmark:hover{
+    color: rgb(255, 0, 0) !important;
+    transition:0.3s;
+    cursor: pointer;
+}
+.fa-xmark{
+    z-index: 3;
+    color: white;
+}
+.logo:hover{
+    filter:brightness(.90);
+    transition:0.3s;
+    cursor: pointer;
+}
+.sidebar{
+    height: 100%;
+    width: 15%;
+    min-width:200px;
+    transform: translateX(-100%);
+    position:fixed;
+    z-index:3;
+    top:0;
+    left:0;
+    background-color: rgb(77, 0, 6);
+    overflow-x:hidden;
+    transition:0.1s;
+}
+.sidebar a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+.buttons{
+    margin-top: 50%;
+}
+.buttons div:hover{
+    background-color: rgb(131, 59, 0);
+    box-shadow: inset 0px 0px 28px -1px #000000;
+}
+.buttons div a{
+    padding-block: 10%;
+    padding-inline:25%;
+    text-align: center;
+}
+.navimg{
+    position:absolute;
+    display: flex;
+    bottom: 10%;
+}
+.navimg img{
+    width: 50%;
+}
+.grid{
+    display: grid;
+    position: relative;
+    height: 70vh;
+    width: 50%;
+    padding: 45px 0;
+    margin: 2vmin;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 2vmin;
+    grid-auto-flow: dense;
+    z-index: 0;
+}
+
+.element{
+    position: relative;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 1s ease;
+}
+.element img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+.grid img{
+    filter: brightness(.7) sepia(1);
+    transition: all 1s ease;
+}
+.element:first-child{
+    grid-row-start:span 2;
+    grid-column-start:span 2;
+}
+.element:last-child{
+    grid-column-start: span 2;
+}
+.paragraph{
+    height: fit-content;
+    width: 45%;
+    border-radius: 10px;
+    margin: auto;
+    background-color: darkgreen;
+    margin-left: 1%;
+    -webkit-box-shadow: 0 0 20px 10px green;
+    box-shadow: 0 0 5px 10px green;
+    padding-block:1%;
+}
+.paragraph p{
+    text-indent: 5%;
+    color: lightgreen;
+    font-size: 100%;
+    padding-inline: 5%;
+    text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-container {
+    background-color: darkgreen;
+    padding-block: 2%;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    box-shadow: 0 0 5px 10px green;
+}
+.form-group {
+        display: inline-block;
+        margin: 10px;
+        padding-inline:6%;
+        scale: 150%;
+}
+
+label{
+        display: block;
+        text-align: center;
+        padding: 1%;
+        color: lightgreen;
+}
+.spacer{
+    height: 1px;
+    padding-top: 45%;
+}
+.top-dropdown{
+    border-radius: 10px;
+    padding: 5px;
+    filter: drop-shadow(1px 1px 3px #000000);
+}
+.top-dropdown:hover{
+    cursor: pointer;
+}
+.submit-button{
+    scale: 150% ;
+    padding: 3px ;
+    border:none;
+    background-color: rgb(90, 214, 90);
+    color: rgb(0, 68, 0);
+    transform: translateY(-5px);
+    border-radius: 10px;
+    padding: 20%;
+    filter: drop-shadow(1px 1px 3px #000000);
+}
+.submit-button:hover{
+    cursor: pointer;
+    background-color: rgb(0, 68, 0);
+    color:  rgb(90, 214, 90);
+    box-shadow: inset 0px 0px 28px -1px #000000;
+}
+.filme{
+    position: relative;
+    height: 800px;
+    background-color: darkgreen;
+    margin-top: 10%;
+    box-shadow: 0 0 5px 10px green;
+    margin-bottom: 10%;
+}
+.carousel{
+    display: block;
+    margin: auto;
+    height: 85%;
+    width: auto;
+}
+.carousel-inner{
+    display: block;
+    margin: auto;
+    width: 40%;
+    height: 100%;
+}
+.image img{
+    width: 30%;
+}
+.carousel-item{
+    background-color: rgb(77, 0, 6);
+    border-radius: 30px;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    box-shadow: inset 0px 0px 28px -1px #000000;
+}
+.movietitle{
+    padding-bottom: 1%;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 200%;
+    color: orange;
+}
+.description{
+    background-color: rgba(255, 123, 0, 0.6);
+    border-radius: 20px;
+    width: 90%;
+    display: block;
+    margin: auto;
+    margin-top: 2%;
+    font-size: 120%;
+}
+.rezerva{
+    position: relative;
+    scale: 150%;
+    background-color: rgb(151, 9, 9);
+    color: orange;
+    padding: 1%;
+    border-radius: 50px;
+    width: 25%;
+    margin-top: 10%;
+}
+.filme p{
+    color: lightgreen;
+    font-size: 300%;
+}
+.rezerva:hover{
+    
+    background-color: orange;
+    color: rgb(151, 9, 9);
+    cursor: pointer;
+    box-shadow: inset 0px 0px 28px -1px #000000;
+}
+.bottomform{
+    background-color: darkgreen;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 50%;
+    border-radius: 30px;
+    margin: 1%;
+    box-shadow: 0 0 5px 10px green;
+    margin-left: 5%;
+}
+.reservation-form{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
+}
+.formfields{
+    display: block;
+    margin: auto;
+    align-items: center;
+    padding: 1%;
+}
+.radio{
+    display: inline flex;
+}
+.bottomsubmit{
+    grid-column: 2;
+    grid-row: 5;
+    
+}
+.bottomsubmitbutton{
+    padding:10px;
+    scale: 100%;
+    border-radius: 20px;
+    background-color: rgb(90, 214, 90);
+    color: rgb(0, 68, 0);
+    border: none;
+    font-size: larger;
+}
+.bottomsubmitbutton:hover{
+    cursor: pointer;
+    background-color:rgb(0, 68, 0) ;
+    color: rgb(90, 214, 90);
+    box-shadow: inset 0px 0px 28px -1px #000000;
+}
+
+.formwrapper{
+    display: inline;
+    width: 100%;
+}
+.work{
+    width: 20%;
+    border-style: dashed;
+    border-width: 10px;
+    border-color: green;
+    border-radius: 100px 0px;
+    position: absolute;
+    transform: translate(230%,-10%)
+}
+.bath{width: 30%;
+    border-style: dashed;
+    border-width: 10px;
+    border-color: green;
+    border-radius: 100px 0px;
+    position: absolute;
+    transform: translate(200%,10%)
+}
+.bottombar{
+    position: relative;
+    display: flex;
+    top: 100%;
+    margin-top: 5%;
+    height: 10vh;
+    background-color: darkgreen;
+}
+
+.bottomtext{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.fa-youtube{
+    font-size: 300%;
+    position: absolute;
+    top: 50%;
+    margin-left: 1%;
+    transform: translateY(-50%);
+}
+.fa-github{
+    font-size: 300%;
+    position: absolute;
+    top: 50%;
+    margin-left: 95%;
+    transform: translateY(-50%);
+}
+@media only screen and (max-width: 600px){
+
+    body{
+        max-width: 100%;
+        overflow-x: hidden;
+        color:white;
+        background-image:url("croco-fundal.png");
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-color: black ;
+        z-index: 0;
+    }
+    
+    .navbar{
+        display:inline;
+        width: 100vw;
+        position:fixed;
+        height: fit-content;
+        z-index: 2;
+    }
+    .form-group {
+        display: inline-block;
+        margin: 10px;
+        padding-inline:10%;
+        scale: 150%;
+        padding-block: 10%;
+    }
+    .carousel{
+        display: block;
+        overflow-x: hidden;
+        margin: auto;
+        height: 85%;
+        width: auto;
+    }
+    .carousel-inner{
+        display: block;
+        margin: auto;
+        width: 95%;
+        height: 100%;
+    }
+    .image img{
+        width: 30%;
+    }
+    .carousel-item{
+        background-color: rgb(77, 0, 6);
+        border-radius: 30px;
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+        overflow-x:hidden;
+    }
+    .rezerva{
+        display: block;
+        margin: auto;
+        margin-top: 5%;
+    }
+    .paragraph{
+        height: fit-content;
+        width: 100vw;
+        border-radius: 10px;
+        margin: 1%;
+        background-color:darkgreen;
+        margin-left: 1%;
+        box-shadow: 0 0 5px 10px green;
+    }
+    .grid{
+        display: grid;
+        position: relative;
+        height: 70vh;
+        width: 100%;
+        padding: 45px 0;
+        margin: 2vmin;
+        grid-template-columns: auto auto;
+        grid-gap: 2vmin;
+        grid-auto-flow: dense;
+    }
+    .grid img{
+        filter: brightness(1) sepia(0);
+    }
+    .submit-button{
+        transform: translateX(-5px);
+    }
+    .top-dropdown{
+        width: 90%;
+    }
+    .work, .bath{
+        opacity: 0;
+    }
+    .reservation-form{
+        display: block;
+    }
+    .bottomform{
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+    .formfields{
+        display: block;
+        margin: auto;
+    }
+    .fields{
+        display: block;
+        margin: auto;
+        width: 100%;
+        border-radius: 50px;
+        height: 40px;
+    }
+    .fa-github{
+        font-size: 300%;
+        position: absolute;
+        top: 50%;
+        margin-left: 88%;
+        transform: translateY(-50%);
+    }
+}
+
+@media only screen and (min-width: 600px)
+{
+    body{
+        color:white;
+        background-image:url("croco-fundal.png");
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-color: black ;
+        z-index: 0;
+    }
+    .navbar{
+    display:inline;
+    width: 100%;
+    position:fixed;
+    height: fit-content;
+    z-index: 2;
+    }
+    .grid img:hover{
+        filter: sepia(0) brightness(1);
+        scale: 100%;
+        border-radius: 10px;
+    }
+    .element:hover{
+        scale: 105%;
+    }
+} 

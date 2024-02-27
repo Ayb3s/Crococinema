@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 100%">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CrocoCinema</title>
+
+		<script
+			src="https://kit.fontawesome.com/5f091974e9.js"
+			crossorigin="anonymous"
+		></script>
+		<script>
+			let isopen = true;
+			function openNav() {
+				isopen = !isopen;
+				if (isopen) {
+					document.getElementById("sidebar").style.transform =
+						"translateX(-100%)";
+				} else {
+					document.getElementById("sidebar").style.transform = "translateX(0%)";
+				}
+			}
+		</script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<nav>
+			<div class="navbar">
+				<a href="#">
+					<button class="logobutton">
+						<img src="logo.png" class="logo" />
+					</button>
+				</a>
+				<ul id="burger" class="open">
+					<button class="open" onclick="openNav()">
+						<i class="fa-solid fa-bars" id="icon" style="color: #ffffff"></i>
+					</button>
+				</ul>
+			</div>
+		</nav>
+		<div class="bg">
+			<div class="form-container">
+				<form>
+					<div class="form-group">
+						<label for="cinema" class="labels">CINEMA</label>
+						<select class="top-dropdown" name="cinema" required>
+							<option value="" hidden>Alege cinema-ul</option>
+							<option value="bucuresti">CrocoCinema Cluj</option>
+							<option value="brasov">CrocoCinema Brasov</option>
+							<option value="cluj">CrocoCinema Bucuresti</option>
+							<option value="iasi">CrocoCinema Timisoara</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="date" class="labels">DATA</label>
+						<input
+							type="date"
+							class="top-dropdown date-select"
+							name="date"
+							required
+						/>
+					</div>
+					<div class="form-group">
+						<input type="submit" class="submit-button" value="Submit" />
+					</div>
+				</form>
+			</div>
+			<div class="wrapper" id="descriere">
+				<div class="paragraph">
+					<p>
+						Crococinema este un loc magic unde lumea fascinantă a filmului poate
+						să se relaxeze alături de noi, dând naștere unei experiențe de
+						neuitat pentru toți vizitatorii. Crococinema este situat într-un
+						mediu natural, cu vegetație pompoasă și lacuri cristaline, oferind o
+						atmosferă deosebit de plăcută. Odată intrați, vizitatorii sunt
+						invitați înăuntru să descopere minunile cinematografiei.
+					</p>
+					<p>
+						Aici, veți găsi o sală de cinema modernă, dotată cu tehnologie de
+						ultimă generație, unde se proiectează cele mai noi filme din toate
+						genurile. Astfel, CrocoCinema este destinația ideală pentru o ieșire
+						în orice perioadă a zilei, cu prietenii sau familia. Vă garantăm că
+						va fi cea mai bombastică experiență, unde fiecare moment este plin
+						de surprize și încântare.
+					</p>
+					<p>
+						În plus, complexul oferă o gamă variată de facilități și activități
+						interactiv, cum ar fi hrănirea crocodililor sau excursii pe barci
+						pentru a explora mai aproape lumea fascinantă a acestor creaturi
+						uimitoare. Crococinema reprezintă un loc unde pe langa vizionarea
+						filmelor, distracția isi face aparitia, in acest fel fiecare vizită
+						devenind o experiență unică și memorabilă.
+					</p>
+				</div>
+				<div class="grid">
+					<div class="element img">
+						<img src="img1.png" alt="img1" title="monopoly" />
+					</div>
+					<div class="element img">
+						<img src="img3.jpg" alt="img2" />
+					</div>
+					<div class="element img">
+						<img src="img4.jpg" alt="img3" />
+					</div>
+					<div class="element img">
+						<img src="img2.png" alt="img3" />
+					</div>
+				</div>
+			</div>
+			<div class="filme" id="filme">
+				<p>FILMELE ZILEI</p>
+				<div
+					id="carousel"
+					class="carousel slide"
+					data-ride="carousel"
+					data-interval="false"
+				>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="movietitle">Puss in Boots</div>
+							<div class="image">
+								<img src="puss.jpg" alt="pussinboots" />
+							</div>
+							<div class="description">
+								"Motanul Încălțat" este un film de animație plin de aventuri și
+								umor. Personajul principal, Motanul Încălțat, pornește într-o
+								călătorie alături de prieteni pentru a găsi ouă de aur magice.
+								Pe parcurs, ei se confruntă cu pericole, inamici și dezvăluie
+								secrete din trecut. Filmul oferă o perspectivă nouă și
+								captivantă asupra acestui iubit personaj din seria "Shrek".
+								Potrivit pentru toate vârstele.
+							</div>
+							<button class="rezerva">Rezerva</button>
+						</div>
+						<div class="carousel-item">
+							<div class="movietitle">Harry Potter</div>
+							<div class="image">
+								<img src="harry.jpg" alt="harrypotter" />
+							</div>
+							<div class="description">
+								Filmul "Harry Potter și Piatra Filozofală" este primul din
+								celebrul franciză "Harry Potter", bazată pe romanele lui J.K.
+								Rowling. Aici, tânărul Harry Potter, un băiat orfan care
+								descoperă că este un vrăjitor, primește o invitație la Școala de
+								Magie și Vrăjitorie Hogwarts. Acolo, împreună cu prietenii săi
+								Ron și Hermione, explorează lumea magică, descoperă misterele
+								legate de Piatra Filozofală și se confruntă cu cel mai întunecat
+								vrăjitor al tuturor timpurilor, Lordul Cap-de-Mort.
+							</div>
+							<button class="rezerva">Rezerva</button>
+						</div>
+						<div class="carousel-item">
+							<div class="movietitle">Star Wars Episode III</div>
+							<div class="image">
+								<img src="starwars.jpg" alt="starwars" />
+							</div>
+							<div class="description">
+								Acest film este a treia parte a trilogiei prequel din seria
+								"Star Wars" și prezintă ascensiunea lui Darth Vader. Războiul
+								dintre Jedi și Sith se intensifică, iar Anakin Skywalker,
+								ucenicul lui Obi-Wan Kenobi, se confruntă cu tentația întunecată
+								a Laturii Întunecate a Forței. În cele din urmă, acest film
+								dezvăluie transformarea lui Anakin în Darth Vader și
+								prefigurează evenimentele care vor conduce la trilogia originală
+								a seriei.
+							</div>
+							<button class="rezerva">Rezerva</button>
+						</div>
+						<div class="carousel-item">
+							<div class="movietitle">Lord of the Rings</div>
+							<div class="image"><img src="lotr.jpg" alt="lotr" /></div>
+							<div class="description">
+								Primul film din trilogia "Stăpânul Inelelor" îl prezintă pe
+								Frodo Baggins, un simplu hobbit, care primește misiunea de a
+								distruge un inel malefic, care conferă putere supremă. El se
+								alătură unui grup divers de tovarăși, inclusiv Gandalf, Aragorn,
+								Legolas și Gimli, pentru a forma Frăția Inelului și a preveni
+								întoarcerea răului în Pământul de Mijloc. Călătoria lor este
+								plină de aventuri și pericole, iar inelul trebuie dus la Muntele
+								Doom pentru a fi distrus.
+							</div>
+							<button class="rezerva">Rezerva</button>
+						</div>
+					</div>
+					<a
+						class="carousel-control-prev"
+						href="#carousel"
+						role="button"
+						data-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a
+						class="carousel-control-next"
+						href="#carousel"
+						role="button"
+						data-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+			<div class="formwrapper">
+				<div class="bottomform" id="rezervare">
+					<form class="reservation-form">
+						<div class="formfields">
+							<label for="nume">NUME</label>
+							<input class="fields" type="text" name="nume" required />
+						</div>
+						<div class="formfields">
+							<label for="prenume">PRENUME</label>
+							<input class="fields" type="text" name="prenume" required />
+						</div>
+						<div class="formfields">
+							<label for="telefon">TELEFON</label>
+							<input
+								class="fields"
+								type="text"
+								name="telefon"
+								required
+								inputmode="numeric"
+								min="0"
+							/>
+						</div>
+						<div class="formfields">
+							<label for="date2">DATA</label>
+							<input class="fields" type="date" name="date2" required />
+						</div>
+						<div class="formfields">
+							<label for="rand">RAND</label>
+							<select class="fields" name="rand" required>
+								<option value="" hidden></option>
+								<option value="rand1">Rand 1</option>
+								<option value="rand1">Rand 2</option>
+								<option value="rand1">Rand 3</option>
+								<option value="rand1">Rand 4</option>
+								<option value="rand1">Rand 5</option>
+								<option value="rand1">Rand 6</option>
+								<option value="rand1">Rand 7</option>
+								<option value="rand1">Rand 8</option>
+								<option value="rand1">Rand 9</option>
+								<option value="rand1">Rand 10</option>
+							</select>
+						</div>
+						<div class="formfields">
+							<label for="spectacol">SPECTACOL</label>
+							<select class="fields" name="spectacol" required>
+								<option value="" hidden></option>
+								<option value="puss">Puss in Boots</option>
+								<option value="harry">Harry Potter</option>
+								<option value="starwars">Star Wars Episode III</option>
+								<option value="lotr">Lord of the Rings</option>
+							</select>
+						</div>
+						<div class="formfields">
+							<label for="locuri">LOCURI</label>
+							<input
+								class="fields"
+								type="number"
+								name="locuri"
+								required
+								inputmode="numeric"
+								min="1"
+							/>
+						</div>
+						<div class="formfields radio">
+							<label for="ochelari">Doriti ochelari?</label>
+							<label for="yes"
+								>DA
+								<input
+									class="fields"
+									type="radio"
+									name="ochelari"
+									value="DA"
+									id="yes"
+							/></label>
+							<label for="no"
+								>NU
+								<input
+									class="fields"
+									type="radio"
+									name="ochelari"
+									value="NU"
+									id="no"
+									checked
+							/></label>
+						</div>
+						<div class="formfields bottomsubmit">
+							<input
+								class="fields bottomsubmitbutton"
+								type="submit"
+								name="submit"
+								id="submit"
+							/>
+						</div>
+					</form>
+
+					<img src="crocoBath.jpg" alt="bath" class="bath" />
+					<img src="crocoWork.jpg" alt="work" class="work" />
+				</div>
+
+				<div class="bottombar">
+					<p class="bottomtext">#croco4life</p>
+					<a href="https://www.youtube.com/watch?v=Mraq-zhXsSM"
+						><i class="fa-brands fa-youtube" style="color: red"></i
+					></a>
+					<a href="https://github.com/Ayb3s"
+						><i class="fa-brands fa-github" style="color: red;"></i></i
+					></a>
+				</div>
+			</div>
+			<div id="sidebar" class="sidebar">
+				<ul id="x" class="close">
+					<button class="close" onclick="openNav()">
+						<i class="fa-solid fa-xmark" id="icon"></i>
+					</button>
+				</ul>
+				<div class="buttons">
+					<div><a href="#" onclick="openNav()">Acasa</a></div>
+					<div><a href="#descriere" onclick="openNav()">Descriere</a></div>
+					<div><a href="#filme" onclick="openNav()">Filme</a></div>
+					<div><a href="#rezervare" onclick="openNav()">Rezervare</a></div>
+				</div>
+				<div class="navimg">
+					<img src="logo1.png" alt="logo1" />
+					<img src="logo2.png" alt="logo2" />
+				</div>
+			</div>
+		</div>
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
